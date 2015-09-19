@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * Created by Administrator on 2015/9/19.
+ * 增加for适合取数据
  */
 public class Demo1 {
 
