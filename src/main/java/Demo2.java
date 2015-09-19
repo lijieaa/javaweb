@@ -3,7 +3,7 @@ import org.junit.Test;
 public class Demo2 {
 
     public void print(Grade g){
-        System.out.println(g.getValue());
+        System.out.println(g.getValue()+"==>"+g.localeValue());
     }
 
     @Test
@@ -14,7 +14,27 @@ public class Demo2 {
 
 enum Grade{
 
-    A("100-90"),B("90-80"),C("80-70"),D("70-60"),E("60-0");
+    A("100-90"){
+        public  String localeValue(){
+            return "优";
+        };
+    },B("90-80"){
+        public  String localeValue(){
+            return "良";
+        };
+    },C("80-70"){
+        public  String localeValue(){
+            return "中";
+        };
+    },D("70-60"){
+        public  String localeValue(){
+            return "差";
+        };
+    },E("60-0"){
+        public  String localeValue(){
+            return "不及格";
+        };
+    };
 
     private Grade(String value){
         this.value = value;
@@ -25,4 +45,6 @@ enum Grade{
     }
 
     private String value;
+
+    public abstract String localeValue();
 }
