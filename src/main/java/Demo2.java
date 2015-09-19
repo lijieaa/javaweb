@@ -10,6 +10,26 @@ public class Demo2 {
     public void test1() throws Exception {
         this.print(Grade.A);
     }
+
+    /**
+     * 测试enum的方法
+     * @throws Exception
+     */
+    @Test
+    public void test2() throws Exception {
+        System.out.println(Grade.A.name());
+        System.out.println(Grade.A.ordinal());
+
+        String str = "B";
+
+        Grade grade = Grade.valueOf(str);
+        System.out.println(grade);
+
+        Grade[] values = Grade.values();
+        for (Grade value : values) {
+            System.out.println(value);
+        }
+    }
 }
 
 enum Grade{
