@@ -1,9 +1,6 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Administrator on 2015/9/19.
@@ -33,9 +30,10 @@ public class Demo1 {
 
     @Test
     public void test3() throws Exception {
-        HashMap<String, String> stringStringHashMap = new HashMap<String, String>();
+        //hashmap无序，linkedhashmap有序
+        HashMap<String, String> stringStringHashMap = new LinkedHashMap<String, String>();
         stringStringHashMap.put("1","a");
-        stringStringHashMap.put("2","b");
+        stringStringHashMap.put("2", "b");
         stringStringHashMap.put("3", "c");
 
         Set<String> strings = stringStringHashMap.keySet();
@@ -45,5 +43,58 @@ public class Demo1 {
             String value = stringStringHashMap.get(key);
             System.out.println(key+"=============>"+value);
         }
+    }
+
+    @Test
+    public void test4() throws Exception {
+
+        LinkedHashMap<String, String> stringStringLinkedHashMap = new LinkedHashMap<String, String>();
+        stringStringLinkedHashMap.put("1","a");
+        stringStringLinkedHashMap.put("2","b");
+        stringStringLinkedHashMap.put("3","c");
+        stringStringLinkedHashMap.put("4", "d");
+
+        Set<Map.Entry<String, String>> entries = stringStringLinkedHashMap.entrySet();
+        Iterator<Map.Entry<String, String>> iterator = entries.iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> next = iterator.next();
+            String key = next.getKey();
+            String value = next.getValue();
+            System.out.println(key+"====>"+value);
+
+        }
+    }
+
+    @Test
+    public void test5() throws Exception {
+        LinkedHashMap<String, String> stringStringLinkedHashMap = new LinkedHashMap<String, String>();
+        stringStringLinkedHashMap.put("1","a");
+        stringStringLinkedHashMap.put("2","b");
+        stringStringLinkedHashMap.put("3","c");
+        stringStringLinkedHashMap.put("4", "d");
+
+
+        Set<String> strings = stringStringLinkedHashMap.keySet();
+        for (String key : strings) {
+            String value = stringStringLinkedHashMap.get(key);
+            System.out.println(key+"====>"+value);
+        }
+
+    }
+
+    @Test
+    public void test6() throws Exception {
+        LinkedHashMap<String, String> stringStringLinkedHashMap = new LinkedHashMap<String, String>();
+        stringStringLinkedHashMap.put("1","a");
+        stringStringLinkedHashMap.put("2","b");
+        stringStringLinkedHashMap.put("3","c");
+        stringStringLinkedHashMap.put("4", "d");
+
+        for (Map.Entry<String, String> stringStringEntry : stringStringLinkedHashMap.entrySet()) {
+            String key = stringStringEntry.getKey();
+            String value = stringStringEntry.getValue();
+            System.out.println(key+"===========>"+value);
+        }
+
     }
 }
