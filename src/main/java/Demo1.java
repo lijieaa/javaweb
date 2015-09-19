@@ -98,4 +98,18 @@ public class Demo1 {
         }
 
     }
+
+
+    public int sum(int ...args){
+        int sum = 0;
+        for (int arg : args) {
+            sum+=arg;
+        }
+        return sum;
+    }
+
+    @Test
+    public void test8() throws Exception {
+        System.out.println(sum(1,2,3,4,5,6));
+    }
 }
