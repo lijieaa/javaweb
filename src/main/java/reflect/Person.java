@@ -9,6 +9,9 @@ import java.util.List;
 public class Person {
 
     public String name = "lijie";
+    private int age = 1;
+
+    public static String s = "ff";
 
     public Person() {
         System.out.println("person");
