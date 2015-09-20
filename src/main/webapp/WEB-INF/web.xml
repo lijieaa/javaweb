@@ -24,8 +24,19 @@
         <servlet-name>httpServletDemo1</servlet-name>
         <url-pattern>/1.html</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
+
+   <!-- <servlet-mapping>
         <servlet-name>httpServletDemo1</servlet-name>
         <url-pattern>/*</url-pattern>
+    </servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>httpServlet2</servlet-name>
+        <servlet-class>servlet.HttpServletDemo2</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>httpServlet2</servlet-name>
+        <url-pattern>/httpServlet2</url-pattern>
     </servlet-mapping>
 </web-app>
