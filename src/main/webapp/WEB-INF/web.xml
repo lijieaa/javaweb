@@ -11,4 +11,13 @@
         <servlet-name>firstServlet</servlet-name>
         <url-pattern>/a</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>httpServletDemo1</servlet-name>
+        <servlet-class>servlet.HttpServletDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>httpServletDemo1</servlet-name>
+        <url-pattern>/httpServletDemo1</url-pattern>
+    </servlet-mapping>
 </web-app>
