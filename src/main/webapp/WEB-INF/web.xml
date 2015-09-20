@@ -24,4 +24,8 @@
         <servlet-name>httpServletDemo1</servlet-name>
         <url-pattern>/1.html</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>httpServletDemo1</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 </web-app>
