@@ -9,7 +9,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>firstServlet</servlet-name>
-        <url-pattern>/a</url-pattern>
+        <url-pattern>/firstServlet</url-pattern>
     </servlet-mapping>
     
     <servlet>
@@ -19,5 +19,9 @@
     <servlet-mapping>
         <servlet-name>httpServletDemo1</servlet-name>
         <url-pattern>/httpServletDemo1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>httpServletDemo1</servlet-name>
+        <url-pattern>/1.html</url-pattern>
     </servlet-mapping>
 </web-app>
