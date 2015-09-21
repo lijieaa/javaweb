@@ -12,16 +12,14 @@ import java.util.Enumeration;
  * Created by Administrator on 2015/9/21.
  */
 public class ServletDemo5 extends HttpServlet {
-    private ServletConfig config;
+    //private ServletConfig config;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String data1 = this.config.getInitParameter("data1");
-        System.out.println(data1);
+        //String data1 = this.config.getInitParameter("data1");
+        //System.out.println(data1);
 
 
         Enumeration<String> initParameterNames = this.getServletConfig().getInitParameterNames();
-
-        System.out.println(initParameterNames);
 
        while (initParameterNames.hasMoreElements()){
            String name = initParameterNames.nextElement();
@@ -35,8 +33,8 @@ public class ServletDemo5 extends HttpServlet {
         super.doPost(req, resp);
     }
 
-    @Override
+    /*@Override
     public void init(ServletConfig config) throws ServletException {
         this.config = config;
-    }
+    }*/
 }
