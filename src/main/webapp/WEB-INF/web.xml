@@ -39,4 +39,39 @@
         <servlet-name>httpServlet2</servlet-name>
         <url-pattern>/httpServlet2</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>httpServlet3</servlet-name>
+        <servlet-class>servlet.httpServletDemo3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>httpServlet3</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>httpServletDemo4</servlet-name>
+        <servlet-class>servlet.httpServletDemo4</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>httpServletDemo4</servlet-name>
+        <url-pattern>/httpServletDemo4</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servlet5</servlet-name>
+        <servlet-class>servlet.ServletDemo5</servlet-class>
+        <init-param>
+            <param-name>data1</param-name>
+            <param-value>aa</param-value>
+        </init-param>
+        <init-param>
+            <param-name>data2</param-name>
+            <param-value>bb</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet5</servlet-name>
+        <url-pattern>/servlet5</url-pattern>
+    </servlet-mapping>
 </web-app>
